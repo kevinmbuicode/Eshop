@@ -5,6 +5,7 @@ import { getStorage } from "firebase/storage";
 
 
 // Your web app's Firebase configuration
+// NODE_ENV KEY ADDED TO VERCEL AS ENVIRONMENT VARIABLES
 export const firebaseConfig = {
   apiKey: process.env.NODE_ENV,
   authDomain: "eshop-a3598.firebaseapp.com",
