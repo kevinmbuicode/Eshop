@@ -114,10 +114,6 @@ const CheckoutForm = () => {
     setIsLoading(false);
   };
 
-  const handleMpesa = () => {
-    alert("Contact 0791560183 to add payment prompt")
-  }
-
   return (
     <section>
       <div className={`container ${styles.checkout}`}>
@@ -155,7 +151,7 @@ const CheckoutForm = () => {
             <div>
               <h3>Mpesa Checkout</h3>
               <p>Paybill no to be added</p>
-              <button className={styles.button} onClick={handleMpesa}>Pay with Paybill</button>
+              <button className={styles.button}>Pay with Paybill</button>
             </div>
           </div>
         </form>
