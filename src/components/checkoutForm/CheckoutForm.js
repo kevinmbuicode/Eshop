@@ -114,6 +114,10 @@ const CheckoutForm = () => {
     setIsLoading(false);
   };
 
+  const handleMpesa = () => {
+    alert("Mpesa prompt will allow user to send money to your paybill. Call 0791560183 for this implementation")
+  }
+
   return (
     <section>
       <div className={`container ${styles.checkout}`}>
@@ -125,6 +129,11 @@ const CheckoutForm = () => {
             </Card>
           </div>
           <div>
+          <div>
+              <h3>Mpesa Checkout</h3>
+              <p>Paybill no credentials to be added</p>
+              <button className={styles.button} onClick={handleMpesa}>Pay with Paybill</button>
+            </div>
             <Card cardClass={`${styles.card} ${styles.pay}`}>
               <h3>Stripe Checkout</h3>
               <PaymentElement id={styles["payment-element"]} />
@@ -148,11 +157,6 @@ const CheckoutForm = () => {
               {/* Show any error or success messages */}
               {message && <div id={styles["payment-message"]}>{message}</div>}
             </Card>
-            <div>
-              <h3>Mpesa Checkout</h3>
-              <p>Paybill no to be added</p>
-              <button className={styles.button}>Pay with Paybill</button>
-            </div>
           </div>
         </form>
       </div>
